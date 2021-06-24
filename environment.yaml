@@ -1,0 +1,23 @@
+name: life
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - configargparse=1.5
+  - cudatoolkit=10.1.243
+  - matplotlib=3.4.2
+  - matplotlib-base=3.4.2
+  - matplotlib-inline=0.1.2
+  - numpy=1.20
+  - ipykernel=5.5.5
+  - opencv=4.5.2
+  - ipython=7.24.1
+  - py-opencv=4.5.2
+  - python=3.7.10
+  - pytorch=1.6.0=py3.7_cuda10.1.243_cudnn7.6.3_0
+  - scikit-image=0.18.1
+  - scipy=1.6.3
+  - tensorboard=2.5.0
+  - torchvision=0.7.0
+  - tqdm=4.61.1
