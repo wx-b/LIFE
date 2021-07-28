@@ -25,5 +25,12 @@ conda activate life
 ### Training
 Comming soon.
 
+### Evaluation
+#### KITTI
+```
+cd evaluation
+python kitti_eval.py --model PATH_To_MODEL --version 2012/2015 --data_dir PATH_TO_KITTI_DATASET
+```
+
 ### Acknowledgements
 Our neural network architecture is mainly built upon [RAFT](https://github.com/princeton-vl/RAFT/).
