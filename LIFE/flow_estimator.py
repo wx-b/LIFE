@@ -1,11 +1,8 @@
-import sys
-
-from core.utils.utils import InputPadder, coords_grid
+from utils.utils import InputPadder, coords_grid
 import torch
 import cv2
 import numpy as np
-from core.raft import RAFT
-
+from raft import RAFT
 
 class Flow_estimator():
     def __init__(self, args):

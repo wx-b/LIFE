@@ -6,14 +6,12 @@ from scipy import interpolate
 
 class InputPadder:
     """ Pads images such that dimensions are divisible by 8 """
-    def __init__(self, dims, mode='sintel'):
+    def __init__(self, dims):
         self.ht, self.wd = dims[-2:]
         pad_ht = (((self.ht // 8) + 1) * 8 - self.ht) % 8
         pad_wd = (((self.wd // 8) + 1) * 8 - self.wd) % 8
-        if mode == 'sintel':
-            self._pad = [pad_wd//2, pad_wd - pad_wd//2, pad_ht//2, pad_ht - pad_ht//2]
-        else:
-            self._pad = [pad_wd//2, pad_wd - pad_wd//2, 0, pad_ht]
+        
+        self._pad = [pad_wd//2, pad_wd - pad_wd//2, 0, pad_ht]
 
     def pad(self, *inputs):
         return [F.pad(x, self._pad, mode='replicate') for x in inputs]
